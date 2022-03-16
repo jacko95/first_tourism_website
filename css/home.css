@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    /*margin: 0;*/
+    /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
+    font-weight: 700;
+}
+
+.hero{
+    height: 85vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url(../immagini/_tag-10064.jpg);/*sfumatura dal primo parametro secondo top-bottom*/
+    background-position: center;/*sets the starting position of a background image. Non ripetuta da in alto a sinistra*/
+    background-size: cover; /*copre lo sfondo della pagina*/
+    overflow-x: hidden;
+    position: relative;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1{
+    color: white;
+    margin-top: 200px;
+    margin-left: 350px;
+    font-size: 80px;
+}
+
+.logo{
+    width: 15vh;
+    height: auto;
+    float: left;
+}
+
+header{
+    background: black;
+}
+
+header::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+nav{
+    float: right;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li{/*per essere affianco gli elementi nella la lista*/
+    display: inline-block;    
+    margin-left: 50px;
+    padding-top: 50px;
+
+    position: relative;/*per fare la transizione*/
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/*nav a:hover {
+    color: white;
+}*/
+
+nav a::before{
+    content: '';/*::before inserisce content prima di a*/
+    /*display: block;*/
+    height: 5px; /*larghezza barra-effetto*/
+    background-color: white;/*coloro barra-effetto*/
+    
+    /*per fare la transizione*/
+    position: absolute;
+    top: 0px;
+    width: 0%;/*lunghezza barra-effetto*/
+    transition: 0.5s;/*durata transizione barra-effetto*/
+}
+
+/*per fare la transizione*/
+nav a:hover::before{
+    width: 100%;
+}

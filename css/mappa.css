@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url(../immagini/DuomoVercelli.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.logo{
+    width: 15vh;
+    height: auto;
+    float: left;
+}
+
+header{
+    background: black;
+}
+
+header::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+nav{
+    float: right;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li{
+    display: inline-block;    
+    margin-left: 50px;
+    padding-top: 50px;
+
+    position: relative;/*per fare la transizione*/
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: white;
+}
+
+nav a::before{
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: white;
+    
+    /*per fare la transizione*/
+    position: absolute;
+    top: 0;
+    width: 0%;
+    transition: 0.5s;
+}
+
+/*per fare la transizione*/
+nav a:hover::before{
+    width: 100%;
+
+}
+
+.map{
+    height: 50vh; 
+    width: 50vw; 
+    margin-left: 3vw;
+    margin-top: 5vh;
+    margin-bottom: 15vh;
+}
+
+
+h1{
+    color: white;
+    margin-top: 5vh;
+    margin-bottom: 6vh;
+    margin-left: 3vw;
+    font-size: 60px;
+    font-style: bold;
+}
+
+h3{
+    color: white;
+    margin-bottom: 4vh;
+    margin-left: 3vw;
+    font-size: 30px;
+    font-style: bold;
+}
+
+p{
+    color: white;
+    margin-bottom: 3vh;
+    margin-left: 3vw;
+}

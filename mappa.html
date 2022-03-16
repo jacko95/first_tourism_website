@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<title>Mappa sede</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
+	<link rel="stylesheet" href="css/mappa.css">
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
+</head>
+<body>
+	<header>
+        <div class="container">
+            <img src="immagini/ONTWN50.jpg" alt="logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="storia.html">STORIA</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="#">DOVE SIAMO</a></li>
+                    <li><a href="contattaci.php">CONTATTACI</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+	<h1>Sede di Vercelli</h1>
+	<div>
+		<p><h3>Contatti</h3>
+		<p><img src="immagini/markerContact.png" alt="marker luogo" style="border:0; width:16px; height:16px;"/> Piazza Sant'Eusebio 5, Vercelli, VC</p>
+		<p><img src="immagini/phoneContact.png" alt="marker telefono" style="border:0; width:16px; height:16px;"/> +39 34456874221</p>
+		<p><img src="immagini/emailContact.png" alt="marker email" style="border:0; width:16px; height:16px;"/> infnnagon@gmail.com</p>
+	</div>
+	<div id="mapid" class="map"></div>
+	<script>
+
+		var mymap = L.map('mapid').setView([45.330663, 8.421740], 16);
+
+		L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+			maxZoom: 18,
+			attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+				'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+				'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+			id: 'mapbox.streets'
+		}).addTo(mymap);
+		
+		L.marker([45.330663, 8.421740]).addTo(mymap);
+		
+	</script>
+</body>
+</html>

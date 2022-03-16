@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="immagini/ONTWN50.jpg" alt="logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="storia.html">STORIA</a></li>
+                    <li><a href="#">GALLERY</a></li>
+                    <li><a href="mappa.html">DOVE SIAMO</a></li>
+                    <li><a href="contattaci.php">CONTATTACI</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="carousel">
+        <button class="carousel_button carousel_button-left is-hidden"> <!--left button-->
+            <img src="immagini/move-to-prev.png" alt="">
+        </button>
+        <div class="carousel_track-container">
+            <ul class="carousel_track">
+                <li class="carousel_slide current-slide">
+                    <img class="carousel_image" src="immagini/Chiesa_di_San_Bernardo_Vercelli.jpg" alt="">
+                </li>
+                <li class="carousel_slide">
+                    <img class="carousel_image" src="immagini/Cavour_neve.jpg" alt="">
+                </li>
+                <li class="carousel_slide">
+                    <img class="carousel_image" src="immagini/Civico.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+        <button class="carousel_button carousel_button-right"><!--right button-->
+            <img src="immagini/move-to-next.png" alt="">
+        </button>
+         <div class="carousel_nav">
+             <button class="carousel_indicator current-slide"></button>
+             <button class="carousel_indicator"></button>
+             <button class="carousel_indicator"></button> 
+         </div>
+    </div>
+    <script src="js/gallery.js"></script>
+</body>
+</html>
